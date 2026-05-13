@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pry-1: #000000;
+  --color-pry-2: #1A1C1E;
+  --color-pry-3: #2F3133;
+  --color-pry-4: #454749;
+  --color-pry-5: #5D5E61;
+  --color-pry-6: #767779;
+  --color-pry-7: #909193;
+  --color-pry-8: #AAABAD;
+  --color-pry-9: #C6C6C9;
+  --color-pry-10: #E2E2E5;
+  --color-pry-11: #F0F0F3;
+  --color-pry-12: #FFFFFF;
+
+  --color-sec-1: #7D2D35;
+  --color-sec-2: #40000C;
+  --color-sec-3: #5E151F;
+  --color-sec-4: #7B2C34;
+  --color-sec-5: #99434A;
+  --color-sec-6: #B85A61;
+  --color-sec-7: #D7737A;
+  --color-sec-8: #F78D93;
+  --color-sec-9: #FFB3B5;
+  --color-sec-10: #FFDADA;
+  --color-sec-11: #FFEDEC;
+
+  --color-ter-1: #201B17;
+  --color-ter-2: #352F2B;
+  --color-ter-3: #4C4641;
+  --color-ter-4: #645D58;
+  --color-ter-5: #7E7670;
+  --color-ter-6: #988F89;
+  --color-ter-7: #B3A9A3;
+  --color-ter-8: #CFC5BE;
+  --color-ter-9: #EBE0DA;
+  --color-ter-10: #FAEFE8;
+
+  --color-ntr-1: #787776;
+  --color-ntr-2: #1C1B1B;
+  --color-ntr-3: #313030;
+  --color-ntr-4: #474646;
+  --color-ntr-5: #5F5E5E;
+  --color-ntr-6: #929090;
+  --color-ntr-7: #ADABAA;
+  --color-ntr-8: #C9C6C5;
+  --color-ntr-9: #E5E2E1;
+  --color-ntr-10: #F4F0EF;
+}

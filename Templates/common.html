@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="flex w-full justify-between">
+        <div>
+            <p>Nocturnode</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">Archives</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Subscribe</a></li>
+            </ul>
+        </div>
+        <div>
+            <form action="">
+                <input type="text" placeholder="search blogs">
+                <button>Search</button>
+            </form>
+            <button>Sign In</button>
+        </div>
+    </nav>
+</body>
+</html>
