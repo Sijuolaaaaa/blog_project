@@ -5,27 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
-    <title>Document</title>
+    <title>Nocturnode</title>
 </head>
 <body>
-    <nav class="flex w-full justify-between">
+    <nav class="shadow-[0_4px_10px_-3px_rgba(0,0,0,0.12)]">
+        <div class="flex items-center justify-between lg:py-2.5 xl:px-24 lg:px-20 sm:px-7 sm:py-1.5 md:px-10">
         <div>
-            <p>Nocturnode</p>
+            <p class="text-ntr-2 sm:text-sm md:text-base lg:text-xl font-bold">Nocturnode</p>
         </div>
-        <div>
-            <ul>
-                <li><a href="">Archives</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Subscribe</a></li>
+        <div class="sm:hidden md:block">
+            <ul class="flex items-center text-pry-3 text-sm lg:text-base">
+                <li class="px-3"><a href="">Archives</a></li>
+                <li class="px-3"><a href="">About</a></li>
+                <li class="px-3"><a href="">Subscribe</a></li>
             </ul>
         </div>
-        <div>
-            <form action="">
-                <input type="text" placeholder="search blogs">
-                <button>Search</button>
+        <div class="flex items-center gap-3">
+            <form action="" class="flex items-center gap-2">
+                <input type="text" placeholder="search blogs" class="border rounded lg:px-2 lg:py-1 sm:px-1.5 sm:text-xs lg:text-sm">
+                <button class="border lg:px-3 lg:py-1 sm:px-1.5 sm:text-xs lg:text-sm">Search</button>
             </form>
-            <button>Sign In</button>
+            <button class="border-2 bg-pry-1 text-pry-12 lg:px-3 lg:py-1.5 sm:px-1.5 sm:text-xs lg:text-sm">Sign In</button>
+        </div>
         </div>
     </nav>
+
+    {% block content %}{% endblock  %}
+
+    <footer class="xl:px-24 lg:px-20 sm:px-7 md:px-10">
+        <p class="my-3 lg:text-base sm:text-sm">Nocturnode</p>
+        <div>
+            <ul class="flex lg:justify-between lg:text-sm sm:text-xs sm:gap-5">
+                <li>A digital publication for the best of minds</li>
+                <li><a href="">Privacy policy</a></li>
+                <li><a href="">Terms of service</a></li>
+                <li><a href="">Contact</a></li>
+                <li>&copy; 2026 Nocturnode. All rights reserved.</li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
+
+
+        
