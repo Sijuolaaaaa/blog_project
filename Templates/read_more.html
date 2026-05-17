@@ -1,0 +1,46 @@
+{% extends "common.html" %} 
+{% load static %} 
+{% block content %}
+
+
+    <div class="my-5">
+      <div class="h-80 lg:h-96">
+        {% if blogPost.image %}
+        <img
+          src="{{blogPost.image.url}}"
+          class="rounded-t-md h-full w-full object-cover mb-2"
+          alt=""
+        />
+        {% else %}
+        <img
+          src="https://picsum.photos/id/28/300"
+          class="rounded-t-lg h-48 w-full object-cover mb-2"
+          alt="Blog-Img"
+        />
+        {% endif %}
+      </div>
+      <div class="flex flex-col flex-1">
+        <h5 class="font-bold text-ntr-3 sm:text-sm pt-2.5 pb-1.5">
+          {{blogPost.title}}
+        </h5>
+        <p class="sm:text-xs xl:text-sm pb-2.5 flex-1">
+          {{blogPost.content}}
+        </p>
+        <p class="sm:text-xs pb-2.5">
+          <b class="italic text-pry-3">Author: </b> {{blogPost.author.first_name}}
+          {{blogPost.author.last_name}}
+        </p>
+        <p class="sm:text-xs pb-2.5 text-pry-3">
+          <b>Last updated: </b> {{blogPost.updated_at}}
+        </p>
+        {% if request.user == blogPost.author %}
+            <div class="flex text-xs gap-5">
+                <a href="" class="bg-pry-3 hover:bg-pry-9 px-2 py-1.5 rounded-lg mt-auto w-fit font-semibold text-pry-10 hover:text-pry-1">Edit</a>
+                <a href="{% url "delete_blog" blog.id %}" class="bg-sec-4 hover:bg-pry-9 p-1.5 rounded-lg mt-auto w-fit font-semibold text-pry-10 hover:text-pry-1">Delete</a>
+            </div>
+        {% endif %}
+        
+      </div>
+    </div>
+
+{% endblock  %}
