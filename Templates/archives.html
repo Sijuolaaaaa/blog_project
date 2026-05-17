@@ -47,11 +47,8 @@
 </div>
 
 <div>
-  <div class="flex justify-between italic text-pry-5 mb-4">
+  <div class="flex italic text-pry-5 mb-4">
     <h1 class="font-semibold sm:text-base">Recent Posts</h1>
-    <p class="sm:text-sm font-medium hover:text-pry-2">
-      <a href="{% url "archives" %}">View Archives</a>
-    </p>
   </div>
   {% if blogPosts %}
   <div
@@ -90,7 +87,7 @@
         </p>
         <a
           href="{% url "single_blog" blog.id %}" id="single_blog"
-          class="bg-pry-3 hover:bg-pry-9 p-1.5 rounded-lg mt-auto w-fit font-semibold text-pry-10 hover:text-pry-1 sm:text-xs" 
+          class="bg-pry-3 hover:bg-pry-9 p-1.5 rounded-lg mt-auto w-fit font-semibold text-pry-10 hover:text-pry-1 sm:text-xs"
           >Read full blog</a
         >
       </div>
