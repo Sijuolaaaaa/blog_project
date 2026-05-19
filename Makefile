@@ -10,4 +10,4 @@ start:
 tailwind:
 	npx @tailwindcss/cli -i static/css/style.css -o static/css/tailwind.css --minify --watch
 
-.PHONY: activate migrate start tailwind
+.PHONY: activate migrate start tailwind 

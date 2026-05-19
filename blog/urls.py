@@ -16,16 +16,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from postApp.views import homeView, archiveView, singleBlogView, deleteBlogView
+from postApp.views import homeView, archiveView, singleBlogView, deleteBlogView, aboutView, editBlogView, addBlogView
 from django.conf import settings
 from django.conf.urls.static import static
+from userApp.views import SignupView, profileView, editProfileView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homeView, name='home'),
     path('archives', archiveView, name='archives'),
     path('single_blog/<int:blog_id>/', singleBlogView, name='single_blog'),
-    path('delete_blog/<int:blog_id>/', deleteBlogView, name='delete_blog')
+    path('delete_blog/<int:blog_id>/', deleteBlogView, name='delete_blog'),
+    path('profile', profileView, name='profile'),
+    path("accounts/", include('django.contrib.auth.urls')),
+    path("signup/", SignupView.as_view(), name='signup'),
+    path('profile/', profileView, name='profile'),
+    path('editProfile/', editProfileView, name='editProfile'),
+    path('about/', aboutView, name='about'),
+    path("edit_blog/<int:blog_id>/", editBlogView, name= "edit_blog"),
+    path("addBlog/", addBlogView, name="addBlog"),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

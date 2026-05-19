@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'postApp',
     'crispy_forms',
     'crispy_tailwind',
+    'userApp',
+    'django_cleanup.apps.CleanupConfig'
 ]
 
 MIDDLEWARE = [
@@ -137,3 +139,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_USE_TLS = config("EMAIL_USE_TLS")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = config("EMAIL_PORT")
+
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"

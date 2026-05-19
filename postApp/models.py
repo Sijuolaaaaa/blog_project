@@ -8,7 +8,7 @@ class UserPost(models.Model):
         ("DRAFT", 'Draft'),
         ("PUBLISH", 'Publish')
     ]
-    title = models.CharField(max_length=50, null=True, blank=True)
+    title = models.CharField(max_length=200, null=True, blank=True)
     content = models.TextField(null=True, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="DRAFT")
