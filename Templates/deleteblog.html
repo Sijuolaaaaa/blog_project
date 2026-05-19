@@ -1,0 +1,38 @@
+{% extends "common.html" %}
+{% load static %}
+{% block content %}
+
+<div class="flex justify-center items-center py-20">
+
+    <div class="bg-ntr-10 p-8 rounded-xl shadow-md w-full max-w-md">
+
+        <h2 class="text-xl font-bold mb-4">
+            Delete Blog
+        </h2>
+
+        <p class="text-sm text-pry-4 mb-6">
+            You are about to delete this blog!
+            "<span class="font-semibold">{{ blog.title }}</span>"?
+        </p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="flex gap-4">
+
+                <button type="submit"
+                        class="bg-sec-3 text-ntr-10 px-4 py-2 rounded-lg hover:bg-ntr-9 hover:text-sec-1"> Yes
+                </button>
+
+                <a href="{% url 'single_blog' blog.id %}"
+                   class="bg-pry-8 text-pry-1 px-4 py-2 rounded-lg hover:bg-ntr-2 hover:text-ntr-10"> No
+                </a>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
